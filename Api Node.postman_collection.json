@@ -1,0 +1,612 @@
+{
+	"info": {
+		"_postman_id": "d51cf620-996b-4bfd-b171-314cac347a9a",
+		"name": "Api Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "http://localhost:3999/api/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andres",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Avila",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "andre@andres.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "andres",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3999/api/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "dracula@dracula.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "gettoken",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3999/api/user/update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjBiMzkxODkxMWYyNjQ2MDQ4MWNjYTMiLCJuYW1lIjoiZHJhY3VsYSIsInN1cm5hbWUiOiJjb25kZW1tIiwiZW1haWwiOiJkcmFjdWxhQGRyYWN1bGEuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImltYWdlIjpudWxsLCJpYXQiOjE1OTQ4NDQxNjd9.pTjqPxYIulxaAo1Y83jNfyWxRNiIgWp13aYM8L1jIy0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Carlos",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Avila Garcia",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "carlos@carlos.com",
+									"type": "text"
+								},
+								{
+									"key": "pasword",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						},
+						"description": "Actauliza datos del usuario que inica sesion "
+					},
+					"response": []
+				},
+				{
+					"name": "Subir fichero de imagen de usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjBiMzkxODkxMWYyNjQ2MDQ4MWNjYTMiLCJuYW1lIjoiZHJhY3VsYSIsInN1cm5hbWUiOiJjb25kZW1tIiwiZW1haWwiOiJkcmFjdWxhQGRyYWN1bGEuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImltYWdlIjpudWxsLCJpYXQiOjE1OTQ4NDQxNjd9.pTjqPxYIulxaAo1Y83jNfyWxRNiIgWp13aYM8L1jIy0"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file0",
+									"type": "file",
+									"src": "/C:/Users/andres/Desktop/Diagrmas_anotes/img/centrosur.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/upload-avatar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"upload-avatar"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener imagen de usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3999/api/avatar/76Ea052Tnd0xSZuof8dh2zP6.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"avatar",
+								"76Ea052Tnd0xSZuof8dh2zP6.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista de Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3999/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar usuario segun Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3999/api/user/5ef37eba93a6593b8860cd41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"user",
+								"5ef37eba93a6593b8860cd41"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Topic",
+			"item": [
+				{
+					"name": "Guardar Topic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZjBiMzkxODkxMWYyNjQ2MDQ4MWNjYTMiLCJuYW1lIjoiRHJhY3VsYSIsInN1cm5hbWUiOiJDb25kZSIsImVtYWlsIjoiZHJhY3VsYUBkcmFjdWxhLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpbWFnZSI6IldBRGZxMTR6LXpPTGpJbllnTFpQdWp0RC5qcGciLCJpYXQiOjE1OTU1Mzc0NDN9.hh90Ciujsk2whERRv7jKxqjKVdqEBuc9ET3leOUu4C4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Tercer Titulo JS",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "contenido nuevo 3",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "lang",
+									"value": "JS 3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/topic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"topic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Paginacion de Topics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZWY1MTk1NjA4NWFhYzExN2MzMzI1ZDIiLCJuYW1lIjoiQ2FybG9zIiwic3VybmFtZSI6IkF2aWxhIiwiZW1haWwiOiJjYXJsb3NAY2FybG9zLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpbWFnZSI6bnVsbCwiaWF0IjoxNTkzMTIxNzkzfQ.y2Q9gNeQ5mz5whBgNX7g_1JpI_1j217inBd1IxohHcI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/topics/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"topics",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post de un Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3999/api/user-topics/5ef51956085aac117c3325d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"user-topics",
+								"5ef51956085aac117c3325d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Topic por id (detalle)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3999/api/topic/5efb827b792fd156a42aab12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"topic",
+								"5efb827b792fd156a42aab12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar topic",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZWY1MTk1NjA4NWFhYzExN2MzMzI1ZDIiLCJuYW1lIjoiQ2FybG9zIiwic3VybmFtZSI6IkF2aWxhIiwiZW1haWwiOiJjYXJsb3NAY2FybG9zLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpbWFnZSI6bnVsbCwiaWF0IjoxNTkzMTIxNzkzfQ.y2Q9gNeQ5mz5whBgNX7g_1JpI_1j217inBd1IxohHcI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Tercer Titulo modificado",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "contenido tercero",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "<></>",
+									"type": "text"
+								},
+								{
+									"key": "lang",
+									"value": "ruby",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/topic/5efb827b792fd156a42aab12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"topic",
+								"5efb827b792fd156a42aab12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Topic si el usuario en sesion lo creo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZWY1MTk1NjA4NWFhYzExN2MzMzI1ZDIiLCJuYW1lIjoiQ2FybG9zIiwic3VybmFtZSI6IkF2aWxhIiwiZW1haWwiOiJjYXJsb3NAY2FybG9zLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpbWFnZSI6bnVsbCwiaWF0IjoxNTkzMTIxNzkzfQ.y2Q9gNeQ5mz5whBgNX7g_1JpI_1j217inBd1IxohHcI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/topic/5eff6664b3477f4850f923ca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"topic",
+								"5eff6664b3477f4850f923ca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda de Topics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3999/api/search/js",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"search",
+								"js"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Anadir comentario a un topic",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZWY1MTk1NjA4NWFhYzExN2MzMzI1ZDIiLCJuYW1lIjoiQ2FybG9zIiwic3VybmFtZSI6IkF2aWxhIiwiZW1haWwiOiJjYXJsb3NAY2FybG9zLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpbWFnZSI6bnVsbCwiaWF0IjoxNTkzMTIxNzkzfQ.y2Q9gNeQ5mz5whBgNX7g_1JpI_1j217inBd1IxohHcI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "content",
+									"value": "comentario 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/comment/topic/5efb827b792fd156a42aab12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"comment",
+								"topic",
+								"5efb827b792fd156a42aab12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar comentario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZWY1MTk1NjA4NWFhYzExN2MzMzI1ZDIiLCJuYW1lIjoiQ2FybG9zIiwic3VybmFtZSI6IkF2aWxhIiwiZW1haWwiOiJjYXJsb3NAY2FybG9zLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpbWFnZSI6bnVsbCwiaWF0IjoxNTkzMTIxNzkzfQ.y2Q9gNeQ5mz5whBgNX7g_1JpI_1j217inBd1IxohHcI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "content",
+									"value": "edicion comentario primero",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3999/api/comment/5f049c2315361016681f8426",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"comment",
+								"5f049c2315361016681f8426"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar comentario topic/comentario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZWY1MTk1NjA4NWFhYzExN2MzMzI1ZDIiLCJuYW1lIjoiQ2FybG9zIiwic3VybmFtZSI6IkF2aWxhIiwiZW1haWwiOiJjYXJsb3NAY2FybG9zLmNvbSIsInJvbGUiOiJST0xFX1VTRVIiLCJpbWFnZSI6bnVsbCwiaWF0IjoxNTkzMTIxNzkzfQ.y2Q9gNeQ5mz5whBgNX7g_1JpI_1j217inBd1IxohHcI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3999/api/comment/5efb827b792fd156a42aab12/5f049c2315361016681f8426",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3999",
+							"path": [
+								"api",
+								"comment",
+								"5efb827b792fd156a42aab12",
+								"5f049c2315361016681f8426"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
